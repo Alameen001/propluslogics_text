@@ -1,0 +1,6 @@
+package com.example.propluslogics_text
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
