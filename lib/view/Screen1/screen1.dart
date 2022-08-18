@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:propluslogics_text/provider/screens_provider.dart';
+import 'package:propluslogics_text/view/Screen1/widgets/Product_image.dart';
 
 import 'package:propluslogics_text/view/Screen1/widgets/appbar.dart';
 import 'package:propluslogics_text/view/Screen1/widgets/custom_text.dart';
@@ -7,6 +9,7 @@ import 'package:propluslogics_text/view/Screen1/widgets/dotted_border.dart';
 import 'package:propluslogics_text/view/Screen1/widgets/order_card.dart';
 import 'package:propluslogics_text/view/Screen1/widgets/order_time.dart';
 import 'package:propluslogics_text/view/Screen1/widgets/profile.dart';
+import 'package:provider/provider.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({Key? key}) : super(key: key);
@@ -169,6 +172,17 @@ class Screen1 extends StatelessWidget {
                   )
                 ],
               ),
+               Consumer<ScreenSprovider>(builder: (context, newValue, chhild) {
+                return ProductImage(
+                  productNum: "Product 1",
+                  isVisible: newValue.isImgVisible,
+                  onTap: () =>
+                      Provider.of<ScreenSprovider>(context, listen: false)
+                          .imgVisibility(),
+                );
+              }),
+
+
               OrderCard(
                 Details: const [
                   Padding(
@@ -259,6 +273,16 @@ class Screen1 extends StatelessWidget {
               ),
               const DottedText(text: 'Vendor Notes for Tailor'),
               // --------------------
+
+              Consumer<ScreenSprovider>(builder: (context, newValue, chhild) {
+                return ProductImage(
+                  productNum: "Product 2",
+                  isVisible: newValue.isImgVisible,
+                  onTap: () =>
+                      Provider.of<ScreenSprovider>(context, listen: false)
+                          .imgVisibility(),
+                );
+              }),
 
               OrderCard(
                 Details: const [

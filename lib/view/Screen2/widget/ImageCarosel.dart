@@ -4,9 +4,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
   List<String> imageS = [
-    "https://assets.ajio.com/cms/AJIO/WEB/03062022-18-leecooper.jpg",
-    "https://assets.ajio.com/cms/AJIO/WEB/03062022-18-altheory.jpg",
-    "https://assets.ajio.com/cms/AJIO/WEB/03062022-18-dnmx.jpg",
+    "assets/download (1).jpg",
+    "assets/download (2).jpg",
+    "assets/download (3).jpg",
   ];
 
 
@@ -28,7 +28,7 @@ class ImageCarosel extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: NetworkImage(imageS[index]))
+                image: AssetImage(imageS[index]))
             ),
           );
         },

@@ -30,9 +30,10 @@ class Screen2 extends StatelessWidget {
               children: [
                 ImageCarosel(),
                 Positioned(
-                  top: MediaQuery.of(context).size.height / 4.5,
+                  top: MediaQuery.of(context).size.height / 3.5,
+                  
                   child: SizedBox(
-                    width: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: indicators(imageS.length, 1),
